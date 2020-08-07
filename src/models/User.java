@@ -50,11 +50,16 @@ public class User {
     @Column(name = "created_at", nullable = false)
     private Timestamp created_at;
 
-    @Column(name = "updated_at", nullable = false)
-    private Timestamp updated_at;
-
     @Column(name = "delete_flag", nullable = false)
     private Integer delete_flag;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -96,13 +101,6 @@ public class User {
         this.created_at = created_at;
     }
 
-    public Timestamp getUpdated_at() {
-        return updated_at;
-    }
-
-    public void setUpdated_at(Timestamp updated_at) {
-        this.updated_at = updated_at;
-    }
 
     public Integer getDelete_flag() {
         return delete_flag;

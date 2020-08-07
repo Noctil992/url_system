@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="ja">
@@ -9,8 +8,7 @@
 <link rel="stylesheet" href="<c:url value='/css/reset.css' />">
 <link rel="stylesheet" href="<c:url value='/css/style.css' />">
 <!-- Bootstrap CSS -->
-<link rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
 
@@ -29,7 +27,7 @@
     </nav>
 
     <div id="content">${param.content }</div>
-    <div id="footer">by R/I</div>
+    <div id="footer"><p class="text-center">by R/I</p></div>
 
 
     <!-- jQuery -->

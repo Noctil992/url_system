@@ -1,7 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:import url="../layout/app.jsp">
-    <c:param name="content">
-        <h2>URLかんたん保存へようこそ</h2>
-    </c:param>
+        <c:param name="content">
+        <div class="jumbotron">
+            <div class="container-fluid">
+                    <h1 class="text-center">URLかんたん保存へようこそ！</h1>
+                    <p class="text-center">このサイトでは、「ブックマークするほどでもないけど保存しておきたいURL」を、タグや日付で整理して保存しておけます。</p>
+              </div>
+           </div>
+
+        <a type="button" class="btn btn-primary btn-lg col-sm-8 col-sm-offset-2"  href="./users/new">新規利用登録</a>
+        <p class="col-sm-12"></p>
+        <button type="button" class="btn btn-success btn-lg col-sm-8 col-sm-offset-2">ログイン</button>
+        </c:param>
 </c:import>
