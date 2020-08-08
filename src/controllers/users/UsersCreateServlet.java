@@ -73,9 +73,8 @@ public class UsersCreateServlet extends HttpServlet {
                 em.persist(u);
                 em.getTransaction().commit();
                 em.close();
-                request.getSession().setAttribute("flush", "登録が完了しました。");
-
-                response.sendRedirect(request.getContextPath() + "/users/mypage");
+                RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/users/create.jsp");
+                rd.forward(request, response);
             }
         }
     }

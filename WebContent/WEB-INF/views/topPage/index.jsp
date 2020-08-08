@@ -11,6 +11,6 @@
 
         <a type="button" class="btn btn-primary btn-lg col-sm-8 col-sm-offset-2"  href="./users/new">新規利用登録</a>
         <p class="col-sm-12"></p>
-        <button type="button" class="btn btn-success btn-lg col-sm-8 col-sm-offset-2">ログイン</button>
+        <a type="button" class="btn btn-success btn-lg col-sm-8 col-sm-offset-2" href="./login">ログイン</a>
         </c:param>
 </c:import>

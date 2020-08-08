@@ -23,6 +23,13 @@
                 </button>
                 <a class="navbar-brand" href="/url_system" id="navbar-top">URLかんたん保存</a>
             </div>
+            <div class="collapse navbar-collapse" id="sample-navbar">
+                        <ul class="nav navbar-nav navbar-right">
+                                <li class="active"><a href="/url_system/logout">ログアウト</a></li>
+                        </ul>
+                </div>
+
+
         </div>
     </nav>
 
