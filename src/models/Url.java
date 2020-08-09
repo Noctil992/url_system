@@ -24,6 +24,14 @@ import javax.persistence.Table;
             name = "getUrlsCount",
             query = "SELECT COUNT(u) FROM Url AS u"
             ),
+    @NamedQuery(
+            name = "getMyAllUrls",
+            query = "SELECT u FROM Url AS u WHERE u.user = :user ORDER BY u.id DESC"
+            ),
+    @NamedQuery(
+            name = "getMyUrlsCount",
+            query = "SELECT COUNT(u) FROM Url AS u WHERE u.user = :user"
+            )
 })
 @Entity
 public class Url {
