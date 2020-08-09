@@ -23,7 +23,7 @@
             <input type="text" name="url" value="${url.url}" />
         <br /><br />
 
-    <label for="content">内容</label><br />
+    <label for="content">コメント</label><br />
         <textarea name="content" rows="10" cols="50">${url.content}</textarea>
         <br /><br />
 

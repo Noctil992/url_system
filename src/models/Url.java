@@ -45,7 +45,7 @@ public class Url {
     private User user;
 
     @Lob
-    @Column(name = "content", nullable = false)         //コメントのこと
+    @Column(name = "content", nullable = true)         //コメントのこと
     private String content;
 
     @Column(name = "create_date", nullable = false)
