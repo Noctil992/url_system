@@ -45,11 +45,11 @@ public class UrlsCreateServlet extends HttpServlet {
             u.setUser((User)request.getSession().getAttribute("login_user"));
 
             Date create_date = new Date(System.currentTimeMillis());
-            String rd_str = request.getParameter("report_date");
+            String rd_str = request.getParameter("url_date");
             if(rd_str != null && !rd_str.equals("")) {
-                create_date = Date.valueOf(request.getParameter("report_date"));
+                create_date = Date.valueOf(request.getParameter("url_date"));
             }
-            u.setCreate_Date(create_date);
+            u.setCreate_date(create_date);
             u.setContent(request.getParameter("content"));
             u.setUrl(request.getParameter("url"));
             List<String> errors = UrlValidator.validate(u);

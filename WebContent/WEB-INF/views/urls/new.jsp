@@ -16,7 +16,7 @@
 
     <form method="POST" action="<c:url value= '/urls/create' />">
         <label for="create_date">作成日</label><br />
-            <input type="date" name="create_date" value="<fmt:formatDate value='${Url.create_date}' pattern='yyyy-MM-dd' />" />
+            <input type="date" name="create_date" value="<fmt:formatDate value='${url.create_date}' pattern='yyyy-MM-dd' />" />
         <br /><br />
 
         <label for="url">登録したいURL</label><br />

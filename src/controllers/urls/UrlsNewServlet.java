@@ -38,7 +38,7 @@ public class UrlsNewServlet extends HttpServlet {
         User login_user = (User)request.getSession().getAttribute("login_user");
         Url u = new Url();
 
-        u.setCreate_Date(new Date(System.currentTimeMillis()));
+        u.setCreate_date(new Date(System.currentTimeMillis()));
         request.setAttribute("url", u);
         request.setAttribute("login_user", login_user);
 
