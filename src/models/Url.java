@@ -1,6 +1,6 @@
 package models;
 
-import java.sql.Timestamp;
+import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -48,8 +48,8 @@ public class Url {
     @Column(name = "content", nullable = false)         //コメントのこと
     private String content;
 
-    @Column(name = "created_at", nullable = false)
-    private Timestamp created_at;
+    @Column(name = "create_date", nullable = false)
+    private Date create_date;
 
     @Column(name = "url", nullable = false)
     private String url;
@@ -78,12 +78,12 @@ public class Url {
         this.content = content;
     }
 
-    public Timestamp getCreated_at() {
-        return created_at;
+    public Date getCreate_Date() {
+        return create_date;
     }
 
-    public void setCreated_at(Timestamp created_at) {
-        this.created_at = created_at;
+    public void setCreate_Date(Date create_date) {
+        this.create_date = create_date;
     }
 
     public String getUrl() {

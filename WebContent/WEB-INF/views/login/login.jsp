@@ -14,7 +14,7 @@
         </c:if>
         <h2>ログイン</h2>
         <form method="POST" action="<c:url value='/login' />">
-            <label for="login_id">社員番号</label><br />
+            <label for="login_id">ログインID</label><br />
             <input type="text" name="login_id" value="${login_id}" />
             <br /><br />
 

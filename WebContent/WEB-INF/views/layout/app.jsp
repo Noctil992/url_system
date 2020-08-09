@@ -33,7 +33,7 @@
         </div>
     </nav>
 
-    <div id="content">${param.content }</div>
+    <div id="content">${param.content}</div>
     <div id="footer"><p class="text-center">by R/I</p></div>
 
 
