@@ -51,7 +51,7 @@ public class UsersCreateServlet extends HttpServlet {
                             )
                     );
             //管理者フラグ　あとでroot以外０に変更
-            u.setAdmin_flag(Integer.parseInt(request.getParameter("admin_flag")));
+            u.setAdmin_flag(0);
 
             Timestamp currentTime = new Timestamp(System.currentTimeMillis());
             u.setCreated_at(currentTime);

@@ -5,14 +5,10 @@
     <c:param name="content">
      <c:choose>
             <c:when test="${user != null}">
-                <h2>${user.name} のマイページ</h2>
+                <h2>${user.name} さんのマイページ</h2>
 
                 <table>
                     <tbody>
-                        <tr>
-                            <th>ログインＩＤ</th>
-                            <td><c:out value="${ser.login_id}" /></td>   <!-- ＩＤが表示できない。ログイン処理実装後に直す -->
-                        </tr>
                         <tr>
                             <th>氏名</th>
                             <td><c:out value="${user.name}" /></td>
