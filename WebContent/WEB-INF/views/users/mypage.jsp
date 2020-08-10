@@ -6,10 +6,13 @@
      <c:choose>
             <c:when test="${user != null}">
                 <h2 class="text-center">${user.name} さんのマイページ</h2><br>
-                <a type="button" class="btn btn-lg btn-primary col-sm-4 col-sm-offset-2" href="/url_system/urls/new"><span class="badge">New</span>ＵＲＬ新規登録へ</a>
-                <a type="button" class="btn btn-lg btn-danger col-sm-4" href="#"><span class="badge">Delete</span>ＵＲＬ削除へ</a><br>
-                <h3 class="text-center col-sm-offset-2">保存したURL一覧</h3>
-                <table class="table">
+                <a type="button" class="btn btn-lg btn-primary col-md-4 col-md-offset-2" href="/url_system/urls/new"><span class="badge">New</span>ＵＲＬ新規登録へ</a>
+                <a type="button" class="btn btn-lg btn-danger col-md-4" href="#"><span class="badge">Delete</span>ＵＲＬ削除へ</a><br />
+                <br />
+                <div class="container">
+                <h1 class="text-center">保存したURL一覧</h1>
+                </div>
+                <table class="table table-condensed">
                 <tbody>
                     <tr>
                      <th class="create_date">作成日時</th>
