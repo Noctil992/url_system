@@ -54,6 +54,9 @@ public class Url {
     @Column(name = "url", nullable = false)
     private String url;
 
+    @Column(name = "delete_flag")
+    private Integer delete_flag;
+
     public Integer getId() {
         return id;
     }
@@ -92,6 +95,14 @@ public class Url {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public Integer getDelete_flag() {
+        return delete_flag;
+    }
+
+    public void setDelete_flag(Integer delete_flag) {
+        this.delete_flag = delete_flag;
     }
 
 }

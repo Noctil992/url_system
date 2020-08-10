@@ -6,9 +6,7 @@
      <c:choose>
             <c:when test="${user != null}">
                 <h2 class="text-center">${user.name} さんのマイページ</h2><br>
-                <a type="button" class="btn btn-lg btn-primary col-md-4 col-md-offset-2" href="/url_system/urls/new"><span class="badge">New</span>ＵＲＬ新規登録へ</a>
-                <a type="button" class="btn btn-lg btn-danger col-md-4" href="#"><span class="badge">Delete</span>ＵＲＬ削除へ</a><br />
-                <br />
+
                 <div class="container">
                 <h1 class="text-center">保存したURL一覧</h1>
                 </div>
@@ -18,14 +16,36 @@
                      <th class="create_date">作成日時</th>
                      <th class="url">URL</th>
                      <th class="url_content">コメント</th>
+                     <th class="delete">削除</th>
                     </tr>
+
                     <c:forEach var="url" items="${urls}" varStatus="status">
-                        <tr>
-                            <td class="create_date"><fmt:formatDate value='${url.create_date}' pattern="yyyy-MM-dd" /></td>
-                            <td class="url"><a href="${url.url}">${url.url}</a></td>
-                            <td class="url_content">${url.content}</td>
-                        </tr>
+                    <c:choose>
+                        <c:when test="${url.delete_flag == 1}" >
+                        </c:when>
+                            <c:otherwise>
+
+
+                                    <tr>
+                                        <td class="create_date"><fmt:formatDate value='${url.create_date}' pattern="yyyy-MM-dd" /></td>
+                                        <td class="url"><a href="${url.url}">${url.url}</a></td>
+                                        <td class="url_content">${url.content}</td>
+                                        <td class="delete">
+                                                                        <p><a href="../urls/destroy?id=${url.id}" onclick="confirmDestroy();">削除</a></p>
+                                                                        <script>
+                                                                            function confirmDestroy() {
+                                                                                if(confirm("本当に削除してよろしいですか？")) {
+                                                                                    document.forms[1].submit();
+                                                                                }
+                                                                            }
+                                                                        </script>
+                                        </td>
+                                    </tr>
+
+                            </c:otherwise>
+                         </c:choose>
                     </c:forEach>
+
                     </tbody>
                 </table>
                 <div id="pagination">
@@ -41,7 +61,8 @@
                 </c:choose>
             </c:forEach>
         </div>
-
+    <a type="button" class="btn btn-lg btn-primary col-md-6 col-md-offset-3" href="/url_system/urls/new"><span class="badge">New</span>ＵＲＬ新規登録へ</a>
+                <br />
 
 
 
