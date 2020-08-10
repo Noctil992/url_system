@@ -3,6 +3,8 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <c:import url="/WEB-INF/views/layout/app.jsp">
     <c:param name="content">
+
+    <div class="container">
      <c:choose>
             <c:when test="${user != null}">
                 <h2 class="text-center">${user.name} さんのマイページ</h2><br>
@@ -22,6 +24,7 @@
                     <c:forEach var="url" items="${urls}" varStatus="status">
                     <c:choose>
                         <c:when test="${url.delete_flag == 1}" >
+                            <td>削除済み</td>
                         </c:when>
                             <c:otherwise>
 
@@ -48,7 +51,9 @@
 
                     </tbody>
                 </table>
-                <div id="pagination">
+
+
+                <div id="paginatio">
             （全 ${urls_count} 件）<br />
             <c:forEach var="i" begin="1" end="${((urls_count - 1) / 15) + 1}" step="1">
                 <c:choose>
@@ -56,11 +61,12 @@
                         <c:out value="${i}" />
                     </c:when>
                     <c:otherwise>
-                        <a href="<c:url value='/?page=${i}' />"><c:out value="${i}" /></a>
+                        <a href="<c:url value='./mypage?id=${user.id}&page=${i}' />"><c:out value="${i}" /></a>
                     </c:otherwise>
                 </c:choose>
             </c:forEach>
         </div>
+
     <a type="button" class="btn btn-lg btn-primary col-md-6 col-md-offset-3" href="/url_system/urls/new"><span class="badge">New</span>ＵＲＬ新規登録へ</a>
                 <br />
 
@@ -71,6 +77,6 @@
                 <h2>お探しのデータは見つかりませんでした。</h2>
             </c:otherwise>
         </c:choose>
-
+    </div>
     </c:param>
 </c:import>
