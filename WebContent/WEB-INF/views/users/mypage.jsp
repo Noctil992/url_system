@@ -10,9 +10,14 @@
                 <h2 class="text-center">${user.name} さんのマイページ</h2><br>
 
                 <div class="container">
-                <h1 class="text-center">保存したURL一覧</h1>
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                <h1 class="text-center panel panel-info">保存したURL一覧</h1>
+                    </div>
                 </div>
-                <table class="table table-condensed">
+
+               <div class="panel-body">
+                <table class="table table-condensed table-bordered">
                 <tbody>
                     <tr>
                      <th class="create_date">作成日時</th>
@@ -24,17 +29,23 @@
                     <c:forEach var="url" items="${urls}" varStatus="status">
                     <c:choose>
                         <c:when test="${url.delete_flag == 1}" >
-                            <td>削除済み</td>
+                        <tr>
+                             <td>削除済み</td>
+                             <td>削除済み</td>
+                             <td>削除済み</td>
+                             <td></td>
+                          </tr>
                         </c:when>
+
                             <c:otherwise>
 
 
                                     <tr>
                                         <td class="create_date"><fmt:formatDate value='${url.create_date}' pattern="yyyy-MM-dd" /></td>
-                                        <td class="url"><a href="${url.url}">${url.url}</a></td>
+                                        <td class="url"><a href="${url.url}"><span class="label label-info">${url.url}</span></a></td>
                                         <td class="url_content">${url.content}</td>
                                         <td class="delete">
-                                                                        <p><a href="../urls/destroy?id=${url.id}" onclick="confirmDestroy();">削除</a></p>
+                                                                        <p><a href="../urls/destroy?id=${url.id}" onclick="confirmDestroy();"><span class="label label-warning">削除</span></a></p>
                                                                         <script>
                                                                             function confirmDestroy() {
                                                                                 if(confirm("本当に削除してよろしいですか？")) {
@@ -53,20 +64,21 @@
                 </table>
 
 
-                <div id="paginatio">
+                <div id="pagination">
             （全 ${urls_count} 件）<br />
             <c:forEach var="i" begin="1" end="${((urls_count - 1) / 15) + 1}" step="1">
                 <c:choose>
                     <c:when test="${i == page}">
-                        <c:out value="${i}" />
+                        <span class="label label-primary"><c:out value="${i}" /></span>
                     </c:when>
                     <c:otherwise>
-                        <a href="<c:url value='./mypage?id=${user.id}&page=${i}' />"><c:out value="${i}" /></a>
+                        <a href="<c:url value='./mypage?id=${user.id}&page=${i}' />"><span class="label label-default"><c:out value="${i}" /></span></a>
                     </c:otherwise>
                 </c:choose>
             </c:forEach>
         </div>
-
+    </div>
+    </div>
     <a type="button" class="btn btn-lg btn-primary col-md-6 col-md-offset-3" href="/url_system/urls/new"><span class="badge">New</span>ＵＲＬ新規登録へ</a>
                 <br />
 

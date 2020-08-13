@@ -68,8 +68,10 @@ public class UrlsCreateServlet extends HttpServlet {
                 em.persist(u);
                 em.getTransaction().commit();
                 em.close();
+                User log =  u.getUser();
+                Integer logid = log.getId();
                 request.getSession().setAttribute("flush", "登録が完了しました。");
-                response.sendRedirect("/url_system/users/mypage?id=" + u.getId());
+                response.sendRedirect("/url_system/users/mypage?id=" + logid);
             }
 
 
