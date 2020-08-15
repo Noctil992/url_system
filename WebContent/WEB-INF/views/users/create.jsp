@@ -4,7 +4,7 @@
     <c:param name="content">
     <p>登録完了</p>
 
-    <a type="button" class="btn btn-primary btn-lg col-sm-8 col-sm-offset-2"  href="../login">ログインする</a>
+    <a type="button" class="btn btn-primary btn-lg col-sm-8 col-sm-offset-2"  href="/login">ログインする</a>
         <p class="col-sm-12"></p>
     </c:param>
 </c:import>

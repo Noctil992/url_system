@@ -71,7 +71,7 @@ public class UrlsCreateServlet extends HttpServlet {
                 User log =  u.getUser();
                 Integer logid = log.getId();
                 request.getSession().setAttribute("flush", "登録が完了しました。");
-                response.sendRedirect("/url_system/users/mypage?id=" + logid);
+                response.sendRedirect("/users/mypage?id=" + logid);
             }
 
 

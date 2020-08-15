@@ -92,7 +92,7 @@ public class LoginServlet extends HttpServlet {
         } else {
             // 認証できたらログイン状態にしてトップページへリダイレクト
             request.getSession().setAttribute("login_user", u);
-            response.sendRedirect("/url_system/users/mypage?id=" + u.getId());
+            response.sendRedirect("/users/mypage?id=" + u.getId());
         }
 
     }

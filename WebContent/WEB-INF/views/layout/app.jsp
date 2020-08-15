@@ -22,11 +22,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/url_system" id="navbar-top">URLかんたん保存</a>
+                <a class="navbar-brand" href="/index.html" id="navbar-top">URLかんたん保存</a>
             </div>
             <div class="collapse navbar-collapse" id="sample-navbar">
                         <ul class="nav navbar-nav navbar-right">
-                                <li class="active"><a href="/url_system/logout">ログアウト</a></li>
+                                <c:choose>
+                                    <c:when test="${login_user != null}">
+                                <li class="active"><a href="/logout">ログアウト</a></li>
+                                    </c:when>
+                                    <c:otherwise>
+                                <li class="active"><a href="/login">ログイン</a></li>
+                                    </c:otherwise>
+                                </c:choose>
                         </ul>
                 </div>
 

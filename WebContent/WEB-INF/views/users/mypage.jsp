@@ -14,14 +14,14 @@
                         <div class="panel-heading">
                 <h1 class="text-center panel panel-info">保存したURL一覧</h1>
                     </div>
-                </div>
+
 
                <div class="panel-body">
                 <table class="table table-condensed table-bordered">
                 <tbody>
                     <tr>
                      <th class="create_date">作成日時</th>
-                     <th class="url">URL</th>
+                     <th class="url">URL(クリックすると別タブで開きます)</th>
                      <th class="url_content">コメント</th>
                      <th class="delete">削除</th>
                     </tr>
@@ -42,10 +42,10 @@
 
                                     <tr>
                                         <td class="create_date"><fmt:formatDate value='${url.create_date}' pattern="yyyy-MM-dd" /></td>
-                                        <td class="url"><a href="${url.url}"><span class="label label-info">${url.url}</span></a></td>
+                                        <td class="url"><a href="${url.url}" target="_blank"><span class="bg-info">${url.url}</span></a></td>
                                         <td class="url_content">${url.content}</td>
                                         <td class="delete">
-                                                                        <p><a href="../urls/destroy?id=${url.id}" onclick="confirmDestroy();"><span class="label label-warning">削除</span></a></p>
+                                                                        <p><a href="/urls/destroy?id=${url.id}" onclick="confirmDestroy();"><span class="label label-warning">削除</span></a></p>
                                                                         <script>
                                                                             function confirmDestroy() {
                                                                                 if(confirm("本当に削除してよろしいですか？")) {
@@ -79,9 +79,9 @@
         </div>
     </div>
     </div>
-    <a type="button" class="btn btn-lg btn-primary col-md-6 col-md-offset-3" href="/url_system/urls/new"><span class="badge">New</span>ＵＲＬ新規登録へ</a>
+    <a type="button" class="btn btn-lg btn-primary col-md-6 col-md-offset-3" href="/urls/new"><span class="badge">New</span>ＵＲＬ新規登録へ</a>
                 <br />
-
+</div>
 
 
             </c:when>

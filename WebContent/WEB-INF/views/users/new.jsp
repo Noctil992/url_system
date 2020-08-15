@@ -3,7 +3,7 @@
 <c:import url="../layout/app.jsp">
     <c:param name="content">
     <div class="continer">
-            <h2 class="text-center">新規登録ページ</h2>
+
 
             <form method="POST" action="<c:url value='/users/create' />">
             <c:if test="${errors != null}">
@@ -15,6 +15,7 @@
                 </div>
             </c:if>
             <div class="container">
+             <h2 class="text-center">新規登録ページ</h2>
                 <div class="form-group">
                     <label for="login_id"><span class="label label-primary">ログインID</span></label><br />
                     <input  class="form-control" type="text" name="login_id" value="${User.login_id}" />

@@ -5,14 +5,14 @@
 		<class>models.User</class>
 		<class>models.Url</class>
 		<properties>
-			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/url_system?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf8"/>
-			<property name="javax.persistence.jdbc.user" value="repuser"/>
-			<property name="javax.persistence.jdbc.password" value="reppass"/>
 			<property name="javax.persistence.schema-generation.database.action" value="create"/>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
 			<property name="hibernate.show_sql" value="true"/>
 			<property name="hibernate.format_sql	" value="true"/>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://us-cdbr-east-02.cleardb.com/heroku_eb840b93cdacc4e?reconnect=true&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf8&amp;characterSetResults=utf8"/>
+			<property name="javax.persistence.jdbc.user" value="bba908d05b4277"/>
+			<property name="javax.persistence.jdbc.password" value="fdab2b6e"/>
 		</properties>
 	</persistence-unit>
 </persistence>

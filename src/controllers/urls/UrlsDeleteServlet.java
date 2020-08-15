@@ -52,7 +52,7 @@ public class UrlsDeleteServlet extends HttpServlet {
         em.getTransaction().commit();
         em.close();
         request.getSession().setAttribute("flush", "削除が完了しました。");
-        response.sendRedirect("/url_system/users/mypage?id=" + login_user.getId());
+        response.sendRedirect("/users/mypage?id=" + login_user.getId());
     }
 
 }

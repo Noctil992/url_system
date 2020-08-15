@@ -31,7 +31,7 @@
     <button type="submit">投稿</button>
     </form>
 
-    <p><a href="../users/mypage?id=<c:out value="${login_user.id}" /> ">マイページヘ戻る</a></p>
+    <p><a href="/users/mypage?id=<c:out value="${login_user.id}" /> ">マイページヘ戻る</a></p>
 
     </c:param>
 </c:import>
