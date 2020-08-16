@@ -5,6 +5,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<meta name="description" content="このサイトでは、ブックマークにため込みたくないURLを日付やコメント付で整理して保存できます。｜　ＵＲＬ　かんたん　保存">
 <title>URL簡単保存</title>
 <link rel="stylesheet" href="<c:url value='/css/reset.css' />">
 <link rel="stylesheet" href="<c:url value='/css/style.css' />">
@@ -22,7 +23,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/index.html" id="navbar-top">URLかんたん保存</a>
+                <c:choose>
+                    <c:when test="${login_user != null}">
+                     <a class="navbar-brand" href="/users/mypage?id=<c:out value="${login_user.id}" />" id="navbar-top">URLかんたん保存</a>
+                    </c:when>
+                    <c:otherwise>
+                   <a class="navbar-brand" href="/index.html" id="navbar-top">URLかんたん保存</a>
+                    </c:otherwise>
+                </c:choose>
+
             </div>
             <div class="collapse navbar-collapse" id="sample-navbar">
                         <ul class="nav navbar-nav navbar-right">

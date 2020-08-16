@@ -5,7 +5,7 @@
         <div class="jumbotron">
             <div class="container-fluid">
                     <h1 class="text-center">URLかんたん保存へようこそ！</h1>
-                    <p class="text-center">このサイトでは、「ブックマークするほどでもないけど保存しておきたいURL」を、日付やコメント付けで整理して保存できます。。</p>
+                    <p class="text-center">このサイトでは、「ブックマークするほどでもないけど保存しておきたいURL」を、日付やコメント付けで整理して保存できます。</p>
               </div>
            </div>
 
